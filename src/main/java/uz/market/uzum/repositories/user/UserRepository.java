@@ -8,6 +8,8 @@ import java.util.Collection;
 import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
+
+
     @Query("select u from User u where upper(u.email) = upper(?1)")
     Optional<User> checkUniqueFields(String email);
 

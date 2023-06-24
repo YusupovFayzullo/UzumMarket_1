@@ -44,7 +44,7 @@ public class JwtUtils {
                 .setIssuedAt(new Date())
                 .setIssuer("https://online.pdp.uz")
                 .setExpiration(tokenResponse.getRefreshTokenExpiry())
-                .signWith(signKey(REFRESH), SignatureAlgorithm.HS256)
+                .signWith(signKey(REFRESH), SignatureAlgorithm.RS256)
                 .compact();
         tokenResponse.setRefreshToken(refreshToken);
         return tokenResponse;
@@ -57,7 +57,7 @@ public class JwtUtils {
                 .setIssuedAt(new Date())
                 .setIssuer("https://online.pdp.uz")
                 .setExpiration(tokenResponse.getAccessTokenExpiry())
-                .signWith(signKey(ACCESS), SignatureAlgorithm.HS512)
+                .signWith(signKey(ACCESS), SignatureAlgorithm.RS256)
                 .compact();
         tokenResponse.setAccessToken(accessToken);
         return tokenResponse;

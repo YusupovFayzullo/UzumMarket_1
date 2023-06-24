@@ -183,4 +183,5 @@ public class SecurityConfigurer {
             return Optional.of(sessionUser.id());
         };
     }
+
 }

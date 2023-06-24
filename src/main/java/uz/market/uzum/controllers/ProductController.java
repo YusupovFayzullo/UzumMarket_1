@@ -25,7 +25,13 @@ import java.util.List;
 @Tag(name = "Product", description = "Product API")
 public class ProductController {
 
+
     private final ProductService productService;
+
+
+
+
+
 
     @Operation(summary = "This API used for creating a product", responses = {
             @ApiResponse(responseCode = "201", description = "Product created"),
@@ -84,5 +90,8 @@ public class ProductController {
         return ResponseEntity.status(204).body(product);
     }
 
+    
+    
+    
 
 }

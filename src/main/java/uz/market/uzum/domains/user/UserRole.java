@@ -23,7 +23,7 @@ public class UserRole {
     @Column(nullable = false, unique = true)
     private String code;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             uniqueConstraints = @UniqueConstraint(columnNames = {"user_role_id", "user_permission_id"}),
             name = "role_permissions",
