@@ -64,6 +64,7 @@ public class CategoryController {
                     @ApiResponse(responseCode = "404", description = "Category not found")})
     @PutMapping(value = "/update")
     public ResponseEntity<Category> updateCategory(@Valid CategoryUpdateDTO dto) {
+        System.out.println();
         Category category = categoryService.updateCategory(dto);
         return ResponseEntity.status(200).body(category);
     }
