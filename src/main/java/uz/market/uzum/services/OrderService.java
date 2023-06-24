@@ -1,22 +1,7 @@
 package uz.market.uzum.services;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import uz.market.uzum.configuration.security.SessionUser;
-import uz.market.uzum.domains.product.Order;
-import uz.market.uzum.domains.product.ProductOrder;
-import uz.market.uzum.dtos.order.AddToOrderDTO;
-import uz.market.uzum.dtos.order.PayOrderDTO;
-import uz.market.uzum.enums.OrderStatus;
-import uz.market.uzum.repositories.OrderRepository;
-import uz.market.uzum.repositories.ProductOrderRepository;
-import uz.market.uzum.repositories.order.OrderPaginationRepository;
-
-import java.util.Collection;
 
 @Service
 @RequiredArgsConstructor
